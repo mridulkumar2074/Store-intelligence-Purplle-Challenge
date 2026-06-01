@@ -1,0 +1,12 @@
+[run]
+source = app,pipeline
+omit =
+    pipeline/detect.py
+    pipeline/staff_detector.py
+    tests/*
+    sample_events/*
+    dashboard/*
+
+[report]
+skip_covered = false
+show_missing = true

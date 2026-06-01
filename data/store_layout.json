@@ -1,0 +1,231 @@
+{
+  "store_id": "STORE_BLR_002",
+  "store_name": "Brigade_Bangalore",
+  "store_alias": "ST1008",
+  "city": "Bangalore",
+  "address": "Brigade Road, Bangalore",
+  "open_hours": { "start": "10:00", "end": "22:00" },
+  "dimensions_mm": { "width": 7500, "depth": 6000 },
+  "zones": [
+    {
+      "zone_id": "ENTRY_EXIT",
+      "name": "Entry / Exit",
+      "type": "entry_exit",
+      "normalized_bounds": { "x_min": 0.0, "y_min": 0.15, "x_max": 0.08, "y_max": 0.85 },
+      "is_billing": false
+    },
+    {
+      "zone_id": "ENTRY_LOBBY",
+      "name": "Entry Lobby",
+      "type": "floor",
+      "normalized_bounds": { "x_min": 0.08, "y_min": 0.2, "x_max": 0.22, "y_max": 0.8 },
+      "is_billing": false
+    },
+    {
+      "zone_id": "FOH",
+      "name": "Front of House",
+      "type": "floor",
+      "normalized_bounds": { "x_min": 0.22, "y_min": 0.25, "x_max": 0.65, "y_max": 0.75 },
+      "is_billing": false
+    },
+    {
+      "zone_id": "FRAGRANCE",
+      "name": "Fragrance & Launch",
+      "type": "display",
+      "normalized_bounds": { "x_min": 0.15, "y_min": 0.35, "x_max": 0.28, "y_max": 0.65 },
+      "is_billing": false
+    },
+    {
+      "zone_id": "MAKEUP_UNIT",
+      "name": "Makeup Unit",
+      "type": "display",
+      "normalized_bounds": { "x_min": 0.42, "y_min": 0.33, "x_max": 0.65, "y_max": 0.67 },
+      "is_billing": false
+    },
+    {
+      "zone_id": "CASH_COUNTER",
+      "name": "Cash Counter / Billing",
+      "type": "billing",
+      "normalized_bounds": { "x_min": 0.82, "y_min": 0.2, "x_max": 0.98, "y_max": 0.7 },
+      "is_billing": true
+    },
+    {
+      "zone_id": "SKINCARE_BACK",
+      "name": "Skincare – Back Wall",
+      "type": "shelf",
+      "normalized_bounds": { "x_min": 0.1, "y_min": 0.0, "x_max": 0.82, "y_max": 0.2 },
+      "is_billing": false,
+      "brands": ["EB","TFS","GV","DermDoc","Minimalist","Aqualogica","Foxtale","JC","D&K","Pilgrim"]
+    },
+    {
+      "zone_id": "MAKEUP_FRONT",
+      "name": "Makeup – Front Wall",
+      "type": "shelf",
+      "normalized_bounds": { "x_min": 0.1, "y_min": 0.82, "x_max": 0.82, "y_max": 1.0 },
+      "is_billing": false,
+      "brands": ["Maybelline","Faces","Lakme","Mars+Nybae","Swiss Beauty","Mens Care","Alps","Loreal","Beauty"]
+    },
+    {
+      "zone_id": "DERMDOC",
+      "name": "DermDoc",
+      "type": "brand_shelf",
+      "normalized_bounds": { "x_min": 0.37, "y_min": 0.0, "x_max": 0.49, "y_max": 0.2 },
+      "is_billing": false,
+      "sku_zone": "DERMDOC"
+    },
+    {
+      "zone_id": "GV",
+      "name": "Good Vibes",
+      "type": "brand_shelf",
+      "normalized_bounds": { "x_min": 0.25, "y_min": 0.0, "x_max": 0.37, "y_max": 0.2 },
+      "is_billing": false,
+      "sku_zone": "GOOD_VIBES"
+    },
+    {
+      "zone_id": "MINIMALIST",
+      "name": "Minimalist",
+      "type": "brand_shelf",
+      "normalized_bounds": { "x_min": 0.49, "y_min": 0.0, "x_max": 0.6, "y_max": 0.2 },
+      "is_billing": false,
+      "sku_zone": "MINIMALIST"
+    },
+    {
+      "zone_id": "AQUALOGICA",
+      "name": "Aqualogica",
+      "type": "brand_shelf",
+      "normalized_bounds": { "x_min": 0.6, "y_min": 0.0, "x_max": 0.7, "y_max": 0.2 },
+      "is_billing": false,
+      "sku_zone": "AQUALOGICA"
+    },
+    {
+      "zone_id": "FOXTALE",
+      "name": "Foxtale / Pilgrim",
+      "type": "brand_shelf",
+      "normalized_bounds": { "x_min": 0.7, "y_min": 0.0, "x_max": 0.82, "y_max": 0.2 },
+      "is_billing": false,
+      "sku_zone": "FOXTALE"
+    },
+    {
+      "zone_id": "FACES",
+      "name": "Faces Canada",
+      "type": "brand_shelf",
+      "normalized_bounds": { "x_min": 0.25, "y_min": 0.82, "x_max": 0.35, "y_max": 1.0 },
+      "is_billing": false,
+      "sku_zone": "FACES"
+    },
+    {
+      "zone_id": "LAKME",
+      "name": "Lakme",
+      "type": "brand_shelf",
+      "normalized_bounds": { "x_min": 0.35, "y_min": 0.82, "x_max": 0.46, "y_max": 1.0 },
+      "is_billing": false,
+      "sku_zone": "LAKME"
+    },
+    {
+      "zone_id": "MAYBELLINE",
+      "name": "Maybelline",
+      "type": "brand_shelf",
+      "normalized_bounds": { "x_min": 0.12, "y_min": 0.82, "x_max": 0.25, "y_max": 1.0 },
+      "is_billing": false,
+      "sku_zone": "MAYBELLINE"
+    },
+    {
+      "zone_id": "ALPS",
+      "name": "Alps Goodness",
+      "type": "brand_shelf",
+      "normalized_bounds": { "x_min": 0.62, "y_min": 0.82, "x_max": 0.72, "y_max": 1.0 },
+      "is_billing": false,
+      "sku_zone": "ALPS"
+    },
+    {
+      "zone_id": "LOREAL",
+      "name": "L'Oreal",
+      "type": "brand_shelf",
+      "normalized_bounds": { "x_min": 0.72, "y_min": 0.82, "x_max": 0.82, "y_max": 1.0 },
+      "is_billing": false,
+      "sku_zone": "LOREAL"
+    }
+  ],
+  "cameras": [
+    {
+      "camera_id": "CAM_ENTRY_01",
+      "file": "CAM 1.mp4",
+      "type": "entry_exit",
+      "description": "Entry/Exit threshold camera — detects inbound and outbound crossings",
+      "fps": 15,
+      "resolution": [1920, 1080],
+      "entry_line_y": 0.60,
+      "zone_coverage": ["ENTRY_EXIT", "ENTRY_LOBBY"],
+      "zone_map": [
+        { "zone_id": "ENTRY_EXIT",  "x_min": 0.0,  "y_min": 0.55, "x_max": 1.0,  "y_max": 1.0  },
+        { "zone_id": "ENTRY_LOBBY", "x_min": 0.0,  "y_min": 0.25, "x_max": 1.0,  "y_max": 0.55 },
+        { "zone_id": "FOH",         "x_min": 0.0,  "y_min": 0.0,  "x_max": 1.0,  "y_max": 0.25 }
+      ]
+    },
+    {
+      "camera_id": "CAM_FLOOR_01",
+      "file": "CAM 2.mp4",
+      "type": "floor",
+      "description": "Main floor camera — covers FOH, fragrance island, and makeup units",
+      "fps": 15,
+      "resolution": [1920, 1080],
+      "zone_coverage": ["FOH", "FRAGRANCE", "MAKEUP_UNIT", "SKINCARE_BACK"],
+      "zone_map": [
+        { "zone_id": "SKINCARE_BACK", "x_min": 0.0, "y_min": 0.0,  "x_max": 1.0, "y_max": 0.22 },
+        { "zone_id": "FRAGRANCE",     "x_min": 0.0, "y_min": 0.22, "x_max": 0.3, "y_max": 0.65 },
+        { "zone_id": "MAKEUP_UNIT",   "x_min": 0.4, "y_min": 0.3,  "x_max": 0.75,"y_max": 0.7  },
+        { "zone_id": "FOH",           "x_min": 0.3, "y_min": 0.22, "x_max": 0.4, "y_max": 0.7  },
+        { "zone_id": "MAKEUP_FRONT",  "x_min": 0.0, "y_min": 0.72, "x_max": 1.0, "y_max": 1.0  }
+      ]
+    },
+    {
+      "camera_id": "CAM_FLOOR_02",
+      "file": "CAM 3.mp4",
+      "type": "floor",
+      "description": "Secondary floor camera — covers back-wall brand shelves",
+      "fps": 15,
+      "resolution": [1920, 1080],
+      "zone_coverage": ["SKINCARE_BACK", "GV", "DERMDOC", "MINIMALIST", "AQUALOGICA", "FOXTALE"],
+      "zone_map": [
+        { "zone_id": "GV",            "x_min": 0.0,  "y_min": 0.0,  "x_max": 0.2,  "y_max": 0.4  },
+        { "zone_id": "DERMDOC",       "x_min": 0.2,  "y_min": 0.0,  "x_max": 0.4,  "y_max": 0.4  },
+        { "zone_id": "MINIMALIST",    "x_min": 0.4,  "y_min": 0.0,  "x_max": 0.6,  "y_max": 0.4  },
+        { "zone_id": "AQUALOGICA",    "x_min": 0.6,  "y_min": 0.0,  "x_max": 0.8,  "y_max": 0.4  },
+        { "zone_id": "FOXTALE",       "x_min": 0.8,  "y_min": 0.0,  "x_max": 1.0,  "y_max": 0.4  },
+        { "zone_id": "SKINCARE_BACK", "x_min": 0.0,  "y_min": 0.0,  "x_max": 1.0,  "y_max": 0.5  },
+        { "zone_id": "FOH",           "x_min": 0.0,  "y_min": 0.5,  "x_max": 1.0,  "y_max": 1.0  }
+      ]
+    },
+    {
+      "camera_id": "CAM_BILLING_01",
+      "file": "CAM 4.mp4",
+      "type": "billing",
+      "description": "Billing / Cash counter camera — queue depth and abandonment tracking",
+      "fps": 15,
+      "resolution": [1920, 1080],
+      "zone_coverage": ["CASH_COUNTER"],
+      "billing_queue_region": { "x_min": 0.0, "y_min": 0.0, "x_max": 1.0, "y_max": 0.85 },
+      "zone_map": [
+        { "zone_id": "CASH_COUNTER", "x_min": 0.0, "y_min": 0.0, "x_max": 1.0, "y_max": 1.0 }
+      ]
+    },
+    {
+      "camera_id": "CAM_FLOOR_03",
+      "file": "CAM 5.mp4",
+      "type": "floor",
+      "description": "Front-wall makeup brands camera — Maybelline, Faces, Lakme aisle",
+      "fps": 15,
+      "resolution": [1920, 1080],
+      "zone_coverage": ["MAKEUP_FRONT", "MAYBELLINE", "FACES", "LAKME", "ALPS", "LOREAL"],
+      "zone_map": [
+        { "zone_id": "MAYBELLINE",   "x_min": 0.0,  "y_min": 0.55, "x_max": 0.18, "y_max": 1.0 },
+        { "zone_id": "FACES",        "x_min": 0.18, "y_min": 0.55, "x_max": 0.36, "y_max": 1.0 },
+        { "zone_id": "LAKME",        "x_min": 0.36, "y_min": 0.55, "x_max": 0.54, "y_max": 1.0 },
+        { "zone_id": "ALPS",         "x_min": 0.54, "y_min": 0.55, "x_max": 0.72, "y_max": 1.0 },
+        { "zone_id": "LOREAL",       "x_min": 0.72, "y_min": 0.55, "x_max": 1.0,  "y_max": 1.0 },
+        { "zone_id": "MAKEUP_FRONT", "x_min": 0.0,  "y_min": 0.55, "x_max": 1.0,  "y_max": 1.0 },
+        { "zone_id": "FOH",          "x_min": 0.0,  "y_min": 0.0,  "x_max": 1.0,  "y_max": 0.55 }
+      ]
+    }
+  ]
+}

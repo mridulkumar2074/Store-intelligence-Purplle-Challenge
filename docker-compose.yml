@@ -1,0 +1,56 @@
+version: "3.9"
+
+services:
+  # ── Intelligence API ────────────────────────────────────────────────────────
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: store-intelligence-api:latest
+    container_name: store_intelligence_api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data          # persist SQLite DB
+      - ./sample_events:/app/sample_events  # pre-generated events for demo
+    environment:
+      - DATABASE_URL=sqlite+aiosqlite:///./data/store_intelligence.db
+      - PYTHONUNBUFFERED=1
+    healthcheck:
+      test: ["CMD", "python", "-c",
+             "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    restart: unless-stopped
+
+  # ── Detection pipeline (run once manually, not always-on) ──────────────────
+  # Run with: docker compose run --rm pipeline --demo --api-url http://api:8000
+  pipeline:
+    build:
+      context: .
+      dockerfile: Dockerfile.pipeline
+    image: store-intelligence-pipeline:latest
+    container_name: store_intelligence_pipeline
+    volumes:
+      - ./CCTV Footage:/app/footage:ro
+      - ./data:/app/data
+      - ./sample_events:/app/sample_events
+    environment:
+      - API_URL=http://api:8000
+      - PYTHONUNBUFFERED=1
+    command:
+      - "--clips-dir=/app/footage"
+      - "--store-layout=/app/data/store_layout.json"
+      - "--output-dir=/app/sample_events"
+      - "--api-url=http://api:8000"
+      - "--skip-frames=5"
+      - "--clip-start=2026-04-10T12:00:00Z"
+    depends_on:
+      api:
+        condition: service_healthy
+    profiles:
+      - pipeline   # only starts with: docker compose --profile pipeline up
+
+volumes: {}

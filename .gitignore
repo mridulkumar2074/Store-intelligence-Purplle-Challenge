@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.pyo
+data/store_intelligence.db
+data/*.db
+.coverage
+*.egg-info/
+dist/
+build/
+.env
