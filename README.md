@@ -1,4 +1,4 @@
-# Purplle Store Intelligence
+# STORE INTELLIGENCE-Purplle Challenge
 
 End-to-end CCTV analytics pipeline for the Brigade Road, Bangalore store.  
 Converts raw camera footage into live business metrics via a containerised REST API.
